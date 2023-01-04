@@ -6,7 +6,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var fontSize = const TextStyle(fontSize: 20);
+    var fontConfig = const TextStyle(
+        fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold);
+    int counter = 0;
 
     return Scaffold(
       // scaffold le da como un tema pa que se vea astetik
@@ -26,22 +28,24 @@ class HomeScreen extends StatelessWidget {
             // <widget> significa que todo lo que ponga dentro de las llaves debe ser un widget
             Text(
               'clicks counter',
-              style: fontSize,
+              style: fontConfig,
             ),
             Text(
-              '0',
-              style: fontSize,
+              '$counter',
+              style: fontConfig,
             ),
           ],
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.plus_one),
         onPressed: () {
-          print('Hola \n');
+          counter++;
+          print('Hola \n $counter');
+          
         },
         backgroundColor: Colors.deepPurpleAccent,
+        child: const Icon(Icons.plus_one),
       ),
     );
   }
