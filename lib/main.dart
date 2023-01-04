@@ -1,4 +1,4 @@
-import 'package:counter_app2/screens/home_screen.dart';
+import 'package:counter_app2/screens/counter_screen.dart';
 import 'package:flutter/material.dart'; // paquete de cupertino esta estilizado para ios
 
 void main() {
@@ -15,6 +15,6 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
         // el padre mas alto deberia ser el que tenga const cuando sale el warning de que necesita const
         debugShowCheckedModeBanner: false,
-        home: HomeScreen());
+        home: CounterScreen());
   }
 }
